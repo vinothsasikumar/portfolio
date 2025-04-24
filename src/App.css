@@ -1,0 +1,83 @@
+.menuButton {
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+}
+
+.custom-underline:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
+.hoverTransition {
+  -webkit-mask-image: linear-gradient(60deg, black 25%, rgba(0, 0, 0, .2) 50%, black 75%);
+  mask-image: linear-gradient(60deg, #000 25%, #0003, #000 75%);
+  -webkit-mask-size: 400%;
+  mask-size: 400%;
+  -webkit-mask-position: 0%;
+  mask-position: 0%
+}
+
+.hoverTransition:hover {
+  -webkit-mask-position: 100%;
+  mask-position: 100%;
+  transition: mask-position 1s ease, -webkit-mask-position 1s ease;
+  cursor: pointer;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
