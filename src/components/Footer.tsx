@@ -3,7 +3,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillInstagram, AiFillFacebook, AiTwoton
 const Footer = () => {
     return (
         <>
-            <div className="w-full h-auto flex flex-col md:flex-col lg:flex-row gap-5 lg:gap-0 justify-evenly items-center p-10">
+            <div className="w-full h-auto flex flex-col md:flex-col lg:flex-row gap-5 lg:gap-0 justify-around items-center p-10">
                 <span className="text-white flex flex-row justify-center items-center gap-2">
                     Credits to <a href="https://github.com/emmabostian/developer-portfolios" target="_blank"><i className="pi pi-github"></i></a> &
                     <a href="https://codewithmukesh.com/" target="_blank"><img className="w-5" src="/mukesh.svg" alt="Vinoth Sasikumar" /></a>

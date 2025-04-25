@@ -9,7 +9,7 @@ import { PrimeReactProvider } from "primereact/api";
 
 createRoot(document.getElementById('root')! as HTMLElement).render(
   <StrictMode>
-    <PrimeReactProvider>
+    <PrimeReactProvider value={{ ripple: true }}>
       <App />
     </PrimeReactProvider>
   </StrictMode>,

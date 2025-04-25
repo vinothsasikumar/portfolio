@@ -62,31 +62,7 @@ const Home = () => {
                         </h2>
                         <p className="text-[#8B99AE] text-justify">
                             {experience.years}.{experience.months} years building scalable web apps using .NET, Angular, React & Azure. Experienced in team leadership, cloud integration, and driving business-focused tech solutions. Passionate about architecture, innovation, and helping teams grow.
-                        </p>
-                        <div className="text-[#8B99AE] text-justify hidden">
-                            With 8+ years of experience in designing, developing, and delivering scalable enterprise solutions, I specialize in:
-                            <br /><br />
-                            <ul className="list-disc pl-5">
-                                <li>Modern Web Technologies: Angular, React, .NET Core, SQL Server, Mongo DB</li>
-                                <li>Cloud & Integration: Azure, Kafka, Microservices, Redis</li>
-                                <li>Leadership: Leading a development team, mentoring team members, and collaborating with stakeholders to achieve business goals.</li>
-                            </ul>
-                            <br />
-                            Key Achievements:
-                            Successfully led migration of legacy applications to modern frameworks, improving performance and scalability.
-                            Designed and implemented centralized systems for seamless access and automation, enhancing operational efficiency.
-                            Recognized with multiple awards, including Shining Star and Best of Us Award, for outstanding contributions to projects and teams.
-                            <br /><br />
-                            Aspiring Project Manager:
-                            As I continue to excel in technical leadership, I am enthusiastic about transitioning into a project management role where I can combine my technical expertise, team management skills, and strategic vision to deliver impactful projects. I am eager to contribute to organizational success through effective project planning, resource management, and stakeholder collaboration.
-                            <br /><br />
-                            What I Bring:
-                            A proven record of delivering high-quality solutions.
-                            Strong interpersonal and communication skills.
-                            Passion for mentoring teams and driving results.
-                            <br /><br />
-                            Let’s connect to discuss technology, leadership, and opportunities to collaborate on innovative projects!
-                        </div>
+                        </p>                        
                         <div className="flex flex-col md:flex-col lg:flex-row justify-start items-center gap-10">
                             <a href="https://www.linkedin.com/in/vinothsasikumar/" aria-label="linkedin" target="_blank">
                                 <button className="flex justify-center items-center gap-2 bg-[#0a66c2] text-white p-3 font-semibold rounded-lg">
@@ -94,7 +70,7 @@ const Home = () => {
                                 </button>
                             </a>
 
-                            <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg">
+                            <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
                                 Learn with me 😄
                             </button>
                         </div>
@@ -108,7 +84,7 @@ const Home = () => {
                         <p className="text-white text-justify">
                             Whether you’re looking for a freelance developer, a collaborator for your next big idea, or someone to teach modern technologies — I’m open and ready. Let’s build and grow together.
                         </p>
-                        <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg">
+                        <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
                             Get in Touch
                         </button>
                     </div>
