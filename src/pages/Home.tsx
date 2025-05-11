@@ -4,6 +4,7 @@ import SkillGrid from "../components/SkillGrid";
 import Inspiration from "../components/Inspiration";
 
 import { SiFreelancer } from "react-icons/si";
+import { NavLink } from "react-router-dom";
 
 
 const Home = () => {
@@ -52,7 +53,7 @@ const Home = () => {
     return (
         <>
             <div className="w-full flex flex-col justify-center items-center mt-[5%]">
-                <div className="w-[90%] 2xl:w-[60%] flex flex-col md:flex-col lg:flex-row gap-10 justify-center items-center">
+                <div className="w-[90%] 2xl:w-[75%] flex flex-col md:flex-col lg:flex-row gap-10 justify-center items-center">
                     <div className="w-[90%] lg:w-[50%] flex flex-col gap-5 mt-20">
                         <span className="text-white text-4xl font-bold">Hello <span className="wave">👋</span>, This is</span>
                         <span className="bg-gradient-to-r from-[#FFC220] via-[#FF4FD8] to-[#8514f5] bg-clip-text text-transparent text-4xl font-bold">Vinoth Sasikumar</span>
@@ -62,7 +63,7 @@ const Home = () => {
                         </h2>
                         <p className="text-[#8B99AE] text-justify">
                             {experience.years}.{experience.months} years building scalable web apps using .NET, Angular, React & Azure. Experienced in team leadership, cloud integration, and driving business-focused tech solutions. Passionate about architecture, innovation, and helping teams grow.
-                        </p>                        
+                        </p>
                         <div className="flex flex-col md:flex-col lg:flex-row justify-start items-center gap-10">
                             <a href="https://www.linkedin.com/in/vinothsasikumar/" aria-label="linkedin" target="_blank">
                                 <button className="flex justify-center items-center gap-2 bg-[#0a66c2] text-white p-3 font-semibold rounded-lg">
@@ -70,9 +71,11 @@ const Home = () => {
                                 </button>
                             </a>
 
-                            <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
-                                Learn with me 😄
-                            </button>
+                            <a href="/resume/vinoth_sasikumar_software_engineer_resume.pdf" aria-label="linkedin" target="_blank">
+                                <button className="flex justify-center items-center border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
+                                    Download Resume
+                                </button>
+                            </a>
                         </div>
                     </div>
                     <SkillGrid />
@@ -84,9 +87,11 @@ const Home = () => {
                         <p className="text-white text-justify">
                             Whether you’re looking for a freelance developer, a collaborator for your next big idea, or someone to teach modern technologies — I’m open and ready. Let’s build and grow together.
                         </p>
-                        <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
-                            Get in Touch
-                        </button>
+                        <NavLink to="/contact">
+                            <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
+                                Get in Touch
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
                 <Inspiration />

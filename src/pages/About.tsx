@@ -11,6 +11,8 @@ import {
     SiPython
 } from 'react-icons/si';
 
+import Marquee from "react-fast-marquee";
+
 const About = () => {
 
     const getExperienceDuration = (startYear: number, startMonth: number) => {
@@ -29,7 +31,7 @@ const About = () => {
     const experience = getExperienceDuration(2016, 5);
 
     const experienceData = [
-        { logo: '/logo/experience/ust.png', company: 'UST', role: 'Software Architect Trainee', duration: 'OCT 2023 - Present', location: 'Chennai, TamilNadu' },
+        { logo: '/logo/experience/ust.png', company: 'UST', role: 'Associate Architect', duration: 'OCT 2023 - Present', location: 'Chennai, TamilNadu' },
         { logo: '/logo/experience/ust.png', company: 'UST', role: 'Technical Lead', duration: 'FEB 2022 - SEP 2023', location: 'Trivandrum, Kerala' },
         { logo: '/logo/experience/ust.png', company: 'UST', role: 'Lead Software Engineer', duration: 'JUN 2021 - FEB 2022', location: 'Chennai, TamilNadu' },
         { logo: '/logo/experience/adp.png', company: 'ADP India', role: 'Software Engineer', duration: 'OCT 2019 - MAY 2021', location: 'Chennai, TamilNadu' },
@@ -38,11 +40,20 @@ const About = () => {
         { logo: '/logo/experience/kadamba.png', company: 'Kadamba Technologies', role: 'Software Trainee', duration: 'MAY 2016 - APR 2017', location: 'Chennai, TamilNadu' },
     ];
 
+    const clients = [
+        { name: "Independence Blue Cross", logo: "/logo/clients/ibx.png" },
+        { name: "Wells Fargo", logo: "/logo/clients/wells.png" },
+        { name: "Athenahealth", logo: "/logo/clients/athena.png" },
+        { name: "International Cricket Council", logo: "/logo/clients/icc.png" },
+        { name: "ESPNcricinfo", logo: "/logo/clients/espn.png" },
+        { name: "Star Sports", logo: "/logo/clients/star.png" },
+    ];
+
     return (
         <>
             <div className="w-full flex flex-col justify-center items-center gap-10 mt-[5%]">
-                <div className="w-full flex flex-col md:flex-row lg:flex-row justify-around items-center">
-                    <div className="w-[50%] text-[#8B99AE] text-justify">
+                <div className="w-full flex flex-col-reverse md:flex-row lg:flex-row lg:justify-around gap-10 lg:gap-0 items-center">
+                    <div className="w-[90%] lg:w-[50%] text-[#8B99AE] text-justify">
                         With {experience.years}.{experience.months} years of experience in designing, developing, and delivering scalable enterprise solutions, I specialize in:
                         <br /><br />
                         <ul className="list-disc pl-5">
@@ -66,12 +77,12 @@ const About = () => {
                         <br /><br />
                         Let’s connect to discuss technology, leadership, and opportunities to collaborate on innovative projects!
                     </div>
-                    <div className="w-[30%]">
-                        <img className="rounded-xl transition-transform duration-500 ease-in-out hover:scale-105" src="/pics/me.png" alt="Vinoth Sasikumar" />
+                    <div className="w-[90%] lg:w-[30%]">
+                        <img className="rounded-xl transition-transform duration-500 ease-in-out lg:hover:scale-105" src="/pics/me.png" alt="Vinoth Sasikumar" />
                     </div>
                 </div>
                 <div className="bg-[#212738] w-[90%] p-[5%] rounded-xl flex flex-col justify-center items-center text-center gap-5">
-                    <h1 className="text-3xl font-semibold text-white">Skills, Tools & Technologies</h1>
+                    <h1 className="text-2xl font-semibold text-white">Skills, Tools & Technologies</h1>
                     <p className="text-white text-center">
                         A showcase of the technologies, frameworks, and tools I’ve mastered and passionately work with to build scalable, efficient, and innovative solutions. From full-stack development to cloud integration and team leadership, my expertise spans across modern technology stacks that drive real-world impact.
                     </p>
@@ -160,7 +171,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='w-[90%] p-[3%] flex flex-col justify-center items-start gap-5'>
-                    <h1 className="text-3xl font-semibold text-white">My Journey So Far</h1>
+                    <h1 className="text-2xl font-semibold text-white">My Journey So Far</h1>
                     <p className="text-white text-center">
                         From writing my first line of code to leading high-impact teams every role, every project has shaped the engineer and mentor I am today.
                     </p>
@@ -186,6 +197,28 @@ const About = () => {
                             </li>
                         ))}
                     </ol>
+                </div>
+                <div className='w-[90%] p-[3%] flex flex-col justify-center items-center gap-5'>
+                    <h1 className="text-2xl font-semibold text-white">Building Solutions for Exceptional Clients</h1>
+                    <p className='text-white text-justify'>
+                        From startups to enterprise giants, my journey with clients has been driven by a deep commitment to excellence, innovation, and collaboration. Every project has been a partnership focused on delivering real business value, building trust, and creating systems that are not just functional but truly transformative. Here's a glimpse into some of the incredible brands and teams I've had the honor to work with.
+                    </p>
+
+                    <div className="bg-[#f5f5f5] mask-gradient p-10">
+                        <Marquee>
+                            {
+                                [0, 1].map(_ => {
+                                    return (
+                                        clients.map((data: any, index: number) => {
+                                            return (
+                                                <img key={index} src={data.logo} alt={data.name} className="rounded-lg object-cover mx-5 cursor-pointer grayscale transition-all duration-500 hover:grayscale-0" />
+                                            )
+                                        })
+                                    )
+                                })
+                            }
+                        </Marquee>
+                    </div>
                 </div>
             </div>
         </>

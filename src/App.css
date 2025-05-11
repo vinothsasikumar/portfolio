@@ -48,6 +48,20 @@
   display: inline-block;
 }
 
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
+  mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
+}
+
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0);

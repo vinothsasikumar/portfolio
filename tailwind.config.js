@@ -9,7 +9,6 @@ export default {
     fontFamily: {
       'poppins': "Poppins",
       'marck-script': "Marck Script",
-      'cormorant-upright': "Cormorant Upright",
     },
     extend: {
       colors: {
