@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 
+import { DownloadIcon } from "lucide-react";
+
 import SkillGrid from "../components/SkillGrid";
 import Inspiration from "../components/Inspiration";
+import ShiningButton from "../components/mage/ShiningButton";
 
 import { SiFreelancer } from "react-icons/si";
 import { NavLink } from "react-router-dom";
@@ -66,15 +69,11 @@ const Home = () => {
                         </p>
                         <div className="flex flex-col md:flex-col lg:flex-row justify-start items-center gap-10">
                             <a href="https://www.linkedin.com/in/vinothsasikumar/" aria-label="linkedin" target="_blank">
-                                <button className="flex justify-center items-center gap-2 bg-[#0a66c2] text-white p-3 font-semibold rounded-lg">
-                                    Connect with me on <i className="pi pi-linkedin"></i>
-                                </button>
+                                <ShiningButton label="Connect with me on" color="linkedin" labelcolor="white" icon={<i className="pi pi-linkedin transition-all group-hover:translate-x-1"></i>} />
                             </a>
 
-                            <a href="/resume/vinoth_sasikumar_software_engineer_resume.pdf" aria-label="linkedin" target="_blank">
-                                <button className="flex justify-center items-center border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
-                                    Download Resume
-                                </button>
+                            <a href="/resume/vinoth_sasikumar_software_engineer_resume.pdf" aria-label="resume" target="_blank">
+                                <ShiningButton label="Download Resume" color="mart-yellow" labelcolor="dark-blue" icon={<DownloadIcon className="transition-all group-hover:translate-y-1" />} />
                             </a>
                         </div>
                     </div>
@@ -88,9 +87,7 @@ const Home = () => {
                             Whether you’re looking for a freelance developer, a collaborator for your next big idea, or someone to teach modern technologies — I’m open and ready. Let’s build and grow together.
                         </p>
                         <NavLink to="/contact">
-                            <button className="flex justify-center items-center gap-2 border border-mart-yellow text-mart-yellow p-3 font-semibold rounded-lg transition-colors duration-500 hover:text-white hover:border-white">
-                                Get in Touch
-                            </button>
+                            <ShiningButton label="Get in Touch" color="mart-yellow" labelcolor="dark-blue" icon="" />
                         </NavLink>
                     </div>
                 </div>

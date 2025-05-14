@@ -36,7 +36,8 @@ const Header = () => {
                     {
                         headerValues.map((data: any, index: number) => {
                             return (
-                                <NavLink to={`/${data.url}`} key={index} onClick={() => setSelectedMenu(index)} className={"group relative flex flex-row justify-center items-center gap-2 menuButton custom-underline hoverTransition " + (index === selectedMenu ? 'text-mart-yellow' : 'text-white')}>
+                                <NavLink to={`/${data.url}`} key={index} onClick={() => setSelectedMenu(index)}
+                                    className={"group relative flex flex-row justify-center items-center gap-2 menuButton custom-underline hoverTransition " + (index === selectedMenu ? 'text-mart-yellow' : 'text-white')}>
                                     <span className={data.icon}></span>
                                     {data.value}
                                 </NavLink>

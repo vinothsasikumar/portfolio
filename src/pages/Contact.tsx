@@ -1,5 +1,8 @@
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
 import { GoMail, GoLocation } from "react-icons/go";
+import { ArrowRight } from 'lucide-react';
+
+import ShiningButton from '../components/mage/ShiningButton';
 
 
 const Contact = () => {
@@ -12,7 +15,7 @@ const Contact = () => {
                     Reach out through any of the options below — I'll get back to you as soon as possible!
                 </p>
 
-                <div className="min-h-screen bg-[#0D0E19] flex items-center justify-center p-8">
+                <div className="h-auto bg-[#0D0E19] flex items-center justify-center p-8">
                     <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl bg-[#171923] rounded-lg p-8">
 
                         <div>
@@ -62,12 +65,7 @@ const Contact = () => {
                                 </div>
                                 <input type="text" placeholder="Subject of your message" className="w-full bg-[#1F2937] border border-mart-yellow text-white rounded-md p-3" />
                                 <textarea placeholder="Write your message here..." rows={5} className="w-full bg-[#1F2937] border border-mart-yellow text-white rounded-md p-3"></textarea>
-                                <button type="button" className="border border-mart-yellow text-mart-yellow rounded-lg px-6 py-3 font-semibold flex items-center gap-2 transition-colors duration-500 hover:text-white hover:border-white">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                    Send Message
-                                </button>
+                                <ShiningButton label="Send Message" color="mart-yellow" labelcolor="dark-blue" icon={<ArrowRight className="transition-all group-hover:translate-x-1" />} />
                             </form>
                         </div>
 

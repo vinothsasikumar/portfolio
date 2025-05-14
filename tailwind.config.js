@@ -15,9 +15,10 @@ export default {
         "dark-blue": "#080E21",
         "mart-yellow": "#FFC220",
         "ang-purple": "#8514f5",
-        "ang-purple2": "#8001c6"
+        "ang-purple2": "#8001c6",
+        "linkedin": "#0a66c2"
       }
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }

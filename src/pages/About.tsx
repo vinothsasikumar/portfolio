@@ -12,6 +12,8 @@ import {
 } from 'react-icons/si';
 
 import Marquee from "react-fast-marquee";
+import { IconCloudRenderer } from '../components/mage/IconGlobe';
+import TimelinePage from '../components/mage/ExperienceTimeline';
 
 const About = () => {
 
@@ -29,17 +31,7 @@ const About = () => {
     };
 
     const experience = getExperienceDuration(2016, 5);
-
-    const experienceData = [
-        { logo: '/logo/experience/ust.png', company: 'UST', role: 'Associate Architect', duration: 'OCT 2023 - Present', location: 'Chennai, TamilNadu' },
-        { logo: '/logo/experience/ust.png', company: 'UST', role: 'Technical Lead', duration: 'FEB 2022 - SEP 2023', location: 'Trivandrum, Kerala' },
-        { logo: '/logo/experience/ust.png', company: 'UST', role: 'Lead Software Engineer', duration: 'JUN 2021 - FEB 2022', location: 'Chennai, TamilNadu' },
-        { logo: '/logo/experience/adp.png', company: 'ADP India', role: 'Software Engineer', duration: 'OCT 2019 - MAY 2021', location: 'Chennai, TamilNadu' },
-        { logo: '/logo/experience/ahs.png', company: 'Access Healthcare Service', role: 'Senior Developer', duration: 'APR 2018 - OCT 2019', location: 'Chennai, TamilNadu' },
-        { logo: '/logo/experience/kadamba.png', company: 'Kadamba Technologies', role: 'Software Developer', duration: 'APR 2017 - APR 2018', location: 'Chennai, TamilNadu' },
-        { logo: '/logo/experience/kadamba.png', company: 'Kadamba Technologies', role: 'Software Trainee', duration: 'MAY 2016 - APR 2017', location: 'Chennai, TamilNadu' },
-    ];
-
+  
     const clients = [
         { name: "Independence Blue Cross", logo: "/logo/clients/ibx.png" },
         { name: "Wells Fargo", logo: "/logo/clients/wells.png" },
@@ -76,9 +68,10 @@ const About = () => {
                         Passion for mentoring teams and driving results.
                         <br /><br />
                         Let’s connect to discuss technology, leadership, and opportunities to collaborate on innovative projects!
+                        <IconCloudRenderer />
                     </div>
-                    <div className="w-[90%] lg:w-[30%]">
-                        <img className="rounded-xl transition-transform duration-500 ease-in-out lg:hover:scale-105" src="/pics/me.png" alt="Vinoth Sasikumar" />
+                    <div className="w-[90%] lg:w-[30%] overflow-hidden rounded-xl">
+                        <img className="transition-transform duration-500 ease-in-out lg:hover:scale-105" src="/pics/me.png" alt="Vinoth Sasikumar" />
                     </div>
                 </div>
                 <div className="bg-[#212738] w-[90%] p-[5%] rounded-xl flex flex-col justify-center items-center text-center gap-5">
@@ -175,28 +168,7 @@ const About = () => {
                     <p className="text-white text-center">
                         From writing my first line of code to leading high-impact teams every role, every project has shaped the engineer and mentor I am today.
                     </p>
-                    <ol className="w-full relative border-s border-gray-200 dark:border-gray-700">
-                        {experienceData.map((experience: any, index: number) => (
-                            <li className="mb-10 ms-4" key={index}>
-                                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-
-                                <div className="flex items-center gap-3 mb-2">
-                                    {experience.logo && (
-                                        <img
-                                            src={experience.logo}
-                                            alt={`${experience.company} logo`}
-                                            className="w-10 h-10 rounded-md object-contain bg-white p-1"
-                                        />
-                                    )}
-                                    <h3 className="text-lg font-semibold text-white">{experience.company}</h3>
-                                </div>
-
-                                <time className="mb-1 text-sm font-normal leading-none text-gray-400">{experience.duration}</time>
-                                <p className="mb-1 text-base font-normal text-gray-500">{experience.role}</p>
-                                <p className="mb-4 text-base font-normal text-gray-500">{experience.location}</p>
-                            </li>
-                        ))}
-                    </ol>
+                    <TimelinePage />                    
                 </div>
                 <div className='w-[90%] p-[3%] flex flex-col justify-center items-center gap-5'>
                     <h1 className="text-2xl font-semibold text-white">Building Solutions for Exceptional Clients</h1>
